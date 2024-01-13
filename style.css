@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: white;
+  min-height: 80vh;
+  background: #B7FDD9D1;
+ 
+  
+}
+#scorebox{
+  width: 20%;
+  border: .3vw solid black;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 3vw;
+  left: 5vw;
+  border-radius: 1vw;
+  font-size: 3vw;
+  background: greenyellow;
+  color: #000;
+}
+
+#end{
+  height: 70vw;
+  width: 70%;
+  border: 0.3vw solid green;
+  background: transparent;
+  position: fixed;
+  top: 30vw;
+  left: 15vw;
+  z-index: 10;
+  display: none;
+  text-align: center;
+  border-radius: 5vw;
+  backdrop-filter: blur(5vw);
+  box-shadow: 0 0 5vw;
+}
+
+#end h1{
+  font-size: 10vw;
+  background: greenyellow;
+  display: inline-block;
+  padding: 2vw 3vw;
+  border-radius: 2vw;
+  margin: 10% 0 20% 0;
+  border: .3vw solid black;
+}
+#end img{
+  height: 30%;
+  margin-top: 20%;
+}
+#frame{
+  height: 120vw;
+  width: 90%;
+  border: .3vw solid black;
+  background: url("road.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5vw;
+}
+#car1{
+  height: 32.5vw;
+  width: 22.5%;
+  position: absolute;
+  top: -20vw;
+  left: 22.5vw;
+  animation: run 1.5s infinite linear;
+  text-align: center;
+
+}
+#car2{
+  height: 30vw;
+  width: 20%;
+  position: absolute;
+  top: 83vw;
+  left: 24vw;
+  text-align: center;
+  transition: left .05s linear;
+  animation: move .2s infinite linear;
+}
+
+#control{
+  width: 70%;
+  position: fixed;
+  top: 135vw;
+  left: 14vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5vw;
+}
+
+#l,#r{
+  border: none;
+  font-size: 15vw;
+  background: transparent;
+}
+
+@keyframes run{
+  from {
+    top: -20vw;
+  }
+  to {
+    top: 125vw;
+  }
+}
+@keyframes move{
+  0% {
+    top: 83vw;
+  }
+  50% {
+    top: 83.5vw;
+  }
+  100% {
+    top: 83vw;
+  }
+  
+}
